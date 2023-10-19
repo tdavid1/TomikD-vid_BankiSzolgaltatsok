@@ -21,5 +21,10 @@ namespace BankiSzolgaltatasok
             aktualisEgyenleg = aktualisEgyenleg + osszeg;
         }
         public abstract bool Kivesz(int osszeg);
+        public Kartya UjKartya(string kartyasszam)
+        {
+            Kartya k = new Kartya(this,kartyasszam,Tulajdonos);
+            return k;
+        }
     }
 }
