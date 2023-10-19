@@ -16,5 +16,22 @@ namespace BankiSzolgaltatasok
         }
 
         public int Akktualisegyenleg { get => akktualisegyenleg;}
+
+        public void Befizet(int osszeg)
+        {
+            akktualisegyenleg = akktualisegyenleg+ osszeg;
+        }
+        public bool Kivesz(int osszeg)
+        {
+            if (akktualisegyenleg - osszeg > 0)
+            {
+                akktualisegyenleg = akktualisegyenleg -osszeg;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }
