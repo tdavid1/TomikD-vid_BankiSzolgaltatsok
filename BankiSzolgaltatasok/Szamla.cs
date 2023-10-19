@@ -8,30 +8,18 @@ namespace BankiSzolgaltatasok
 {
     public abstract class Szamla :BankiSzolgaltatas
     {
-        private int akktualisegyenleg;
+        protected int aktualisEgyenleg;
 
-        protected Szamla(int akktualisegyenleg,Tulajdonos tulajdonos) : base(tulajdonos) 
+        protected Szamla(Tulajdonos tulajdonos) : base(tulajdonos) 
         {
-            this.akktualisegyenleg = akktualisegyenleg;
         }
 
-        public int Akktualisegyenleg { get => akktualisegyenleg;}
+        public int AktualisEgyenleg { get => aktualisEgyenleg;}
 
         public void Befizet(int osszeg)
         {
-            akktualisegyenleg = akktualisegyenleg+ osszeg;
+            aktualisEgyenleg = aktualisEgyenleg + osszeg;
         }
-        public bool Kivesz(int osszeg)
-        {
-            if (akktualisegyenleg - osszeg > 0)
-            {
-                akktualisegyenleg = akktualisegyenleg -osszeg;
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
+        public abstract bool Kivesz(int osszeg);
     }
 }
