@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace BankiSzolgaltatasok
 {
-    internal class Szamla
+    public abstract class Szamla :BankiSzolgaltatas
     {
+        private int akktualisegyenleg;
+
+        protected Szamla(int akktualisegyenleg,Tulajdonos tulajdonos) : base(tulajdonos) 
+        {
+            this.akktualisegyenleg = akktualisegyenleg;
+        }
+
+        public int Akktualisegyenleg { get => akktualisegyenleg;}
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BankiSzolgaltatasok
 {
-    internal class HitelSzamla
+    public class HitelSzamla
     {
     }
 }
