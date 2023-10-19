@@ -8,7 +8,7 @@ namespace BankiSzolgaltatasok
 {
     public class MegtakaritasiSzamla : Szamla
     {
-        private static double alapKamat = 1.1;
+        public static double alapKamat = 1.1;
         private double kamat;
 
         public MegtakaritasiSzamla(Tulajdonos tulajdonos) : base(tulajdonos)
