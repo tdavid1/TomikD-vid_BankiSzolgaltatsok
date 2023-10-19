@@ -8,5 +8,13 @@ namespace BankiSzolgaltatasok
 {
     internal class BankiSzolgaltatas
     {
+        private Tulajdonos tulajdonos;
+
+        public BankiSzolgaltatas(Tulajdonos tulajdonos)
+        {
+            this.tulajdonos = tulajdonos;
+        }
+
+        internal Tulajdonos Tulajdonos { get => tulajdonos;}
     }
 }

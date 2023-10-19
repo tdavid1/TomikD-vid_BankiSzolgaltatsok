@@ -8,5 +8,13 @@ namespace BankiSzolgaltatasok
 {
     internal sealed class Tulajdonos
     {
+        private string nev;
+
+        public Tulajdonos(string nev)
+        {
+            this.nev = nev;
+        }
+
+        public string Nev { get => nev; set => nev = value; }
     }
 }
